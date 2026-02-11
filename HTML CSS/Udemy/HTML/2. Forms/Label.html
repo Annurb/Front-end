@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labels</title>
+</head>
+<body>
+    <button>Outside of the form</button>
+    <form action="/search/">
+    <!--Labels servem pra conectar-se com os inputs-->
+    <button type="button">oie</button>
+    <p>
+        <label for="username">Enter a username:</label>
+        <input id="username" type="text" placeholder="username" name="username">
+    </p>
+    <p>
+        <label for="password">Enter a password</label>
+        <input id="password" type="password" placeholder="password" name="password">
+    </p>
+    <p>
+        <label>Enter a color:
+            <input type="color" name="color"> </label>
+        
+    </p>
+    <p>
+        <label for="number">Enter a number: </label>
+        <input id="number" type="number" placeholder="number" name="number">
+    </p>
+    <button>Submit</button>
+    <input type="submit" value="Click Me!" >
+    </form>
+    <h1>Searches</h1>
+    <h3>Search Reddit</h3>
+    <form action="https://reddit.com/search">
+        <input type="text" name="q">
+        <button>Search Reddit</button>
+    </form>
+    <h3>Search Google</h3>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search Google</button>
+    </form>
+    <h3>Search Youtube</h3>
+
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+    </form>
+</body>
+</html>

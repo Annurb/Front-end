@@ -1,0 +1,77 @@
+*{
+  margin:0 auto;
+  padding:0;
+}
+body{
+  background-color: #60a9ff;
+  font-family: 'Open Sans', sans-serif;
+  text-transform:uppercase;
+  font-weight: normal;
+  text-align:center;
+}
+h2 {
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom:40px;
+  color:grey;
+  font-size: 0.8em;
+}
+img{
+  width:150px;
+}
+ul li{
+  list-style:none;
+  width:200px;
+  margin:20px;
+  color:#016ff9;
+  font-size:0.8em;
+  font-weight:600;
+}
+/*botao #016ff9;*/
+span{
+  display:block;
+  color:#0551ae;
+  font-weight: 800;
+  font-size:1.2em;
+  margin-bottom:20px;
+}
+a.pricing-button{
+  text-decoration: none;
+  border: 1px solid #016ff9;
+  padding:5px 20px 5px 20px;
+  border-radius:5px;
+  color:#016ff9;
+  font-size: 0.8em;
+}
+a.pricing-button:nth-of-type(2){
+  background-color: #016ff9;
+}
+
+div.panel{
+  margin-top: 100px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color:white;
+  height:400px;
+  width:800px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.223);
+}
+div div.pricing-plan{
+  display:inline;
+}
+div div.pricing-plan:nth-of-type(2){
+  border-left:2px solid rgba(128, 128, 128, 0.271);
+  border-right: 2px solid rgba(128, 128, 128, 0.271);
+}
+@media(max-width:800px){
+  div.panel{
+    flex-direction:column;
+    height:1000px;
+    width:400px;
+  }
+  div div.pricing-plan:nth-of-type(2){
+  border:0px solid white;
+}
+}

@@ -1,0 +1,177 @@
+/* Projeto: Site Android*/
+@charset "UTF-8";
+/*Não esquecer de colocar a parte do charset no início de qualquer arquivo CSS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');/*fonte importada*/
+
+@font-face{/*fonte baixada*/
+    font-family: "android";
+    src: url('pacote-projeto-d010/fontes/idroid.otf') format('opentype');
+    font-weight:normal;
+    font-style:normal;
+}
+:root{/*Variáveos de cores e fontes*/
+    --cor0:#c5ebd6;
+    --cor1:#83e1ad;
+    --cor2:#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+
+    --fonte-padrao:Arial, Verdana, Helvetica,sans-serif;
+    --fonte-destaque:"Bebas Neue", sans-serif;
+    --fonte-android:"android", cursive;
+}
+*{/*configuração global do css*/
+    margin:0px;
+    padding:0px;
+}
+body{/*configuração da corde fundo  e do estilo padão do texto*/ 
+   background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+a.externo:after{/*Todos os links externos conterão após essa configuração um emoji de link*/
+    content:'\00A0\1F517'
+}
+header{/*configuração do header*/
+    background-image: linear-gradient(180deg, var(--cor3) , var(--cor5));
+    min-height: 150px;
+    text-align:center;
+    padding-top:30px;/*espaçamento do topo do header*/
+}
+header >h1{/*apenas o título do header vai ser configurado com isso*/
+    font-weight:normal;/*não vai ter peso na fonte*/
+    color:white;
+    font-family:var(--fonte-destaque);
+    margin-bottom: 20px;/*cria uma margem embaixo de h1*/
+    font-size:3em;/*aumenta o tamanho da fonte em relação ao padrão*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.207);
+}
+header >p{/*apenas o parágrafo dentro de header vai ser configurado*/
+    font-family:var(--fonte-padrao);
+    color: white;
+    max-width:500px;/*isso faz com que ocorra uma quebra no parágrafo e ele não fique muito grande*/
+    padding-right:10px;/*assim o texto não vai ficar colado na borda*/
+    padding-left:10px;
+    font-size:1.2em;
+    margin:auto;/*centraliza o parágrafo*/
+    text-shadow:2px 2px 0px rgba(0, 0, 0, 0.207);
+    margin-bottom:20px;/*cria uma margem embaixo do parágrafo*/
+}
+nav{/*configuração do menu de navegação*/
+    background-color:var(--cor5);
+    padding:10px;
+    box-shadow:0px 7px 7px rgba(0,0,0,0.452);
+}
+nav >a{/*configuração dos links do menu de navegação*/
+    color:var(--cor1);
+    padding:10px;
+    text-decoration:none;/*retira o sublinhado dos links*/
+    font-weight:bold;/*coloca os links em negrito*/
+    border-radius: 5px 5px 0px 0px;/*cria uma borda arredondada no topo dos links*/
+    transition-duration:.5s;/*duração da transição do hover*/
+}
+nav>a:hover{/*configuração do hover dos links do menu*/
+    background-color:var(--cor3);
+    color:var(--cor5);
+}
+main{/*configuração do main*/
+    min-width: 300px;/*define uma largura mínima para o main, o que o faz caber em telas pequenas de celulares como iphone5*/
+    max-width:1000px;/*define tamanho máximo do main, para ser usado em telas grandes como desktop*/
+    margin:auto;/*centraliza o main no meio da tela*/
+    background-color: white;
+    margin-bottom:30px;
+    padding: 20px;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.27);
+    border-bottom-left-radius:10px;/*cria uma borda arredondada no canto inferior esquerdo do main*/
+    border-bottom-right-radius:10px;/*mesma coisa, mas no canto oposto*/
+}
+main p{/*configuração de todos os parágrafos dentro do main*/
+    margin: 15px 0px 15px 0px;/*cria uma margem em cima e embaixo do parágrafo*/
+    text-align:justify;/*justifica o texto do parágrafo*/
+    text-indent: 30px;/*cria um recuo de trinta pixels no início de cada parágrafo*/
+    font-size:1.1em;
+    line-height:2em;/*define o espaçamento entre as linhas do parágrafo*/
+}
+main strong{/*configuração das palavras em negrito de main*/
+    color:var(--cor4);
+    font-weight:bold;
+}
+main a{/*configuração dos links*/
+    text-decoration:none;/*retira sublinhado*/
+    color:var(--cor4);
+}
+main a:hover{/*configuração do link após passar o mouse por cima*/
+    text-decoration:underline;
+    color:var(--cor4);
+}
+main h1{
+    font-weight:normal;/*lembrando que o h1 vem com a fonte com peso*/
+    color:var(--cor5);
+    font-family:var(--fonte-android);
+    font-size:1.8em;/*aumenta o tamanho da fonte em relação ao padrão*/
+}
+main h2{
+    font-weight:normal;
+    font-family:var(--fonte-android);
+    color:var(--cor4);
+    font-size:1.3em;
+    background-image:linear-gradient(to right, var(--cor1), transparent);/*cria um degradê do verde até uma transparência*/
+}
+/*configurações de imagens para deixar o site responsivo*/
+main img{
+    width:100%;/*faz com que a imagem ocupe 100% da largura do main, entao, mesmo que diminua ou aumente a imagem irá diminuir e aumentar junto*/
+}
+main img.pequena{
+    max-width:350px;
+    display:block;/*transforma a imagem em um bloco, assim ela nao fica colada no texto*/
+    margin:auto;/*centraliza a imagem*/
+}/*configurações de vídeo para deixar o site responsivo*/
+div.video{
+    background-color:var(--cor5);
+    margin:0px -20px 30px -20px;/*faz a imagem colar nos lados do main*/
+    padding:20px;
+    padding-bottom:56.5%;/*isso faz com que a altura do vídeo seja proporcional a largura, assim o vídeo não fique tao deformado*/
+    position:relative;/*isso faz com que o vídeo fique posicionado dentro da div*/
+}
+div.video >iframe{/*configuração do iframe do video*/
+    position:absolute;/*o iframe vai ficar posicionado dentro da div sempre;*/
+    top:5%;/*o vídeo vai ficar 5% abaixo do topo da div*/
+    left:5%;/*o vídeo vai ficar 5% a direita do lado esquerdo da div*/
+    width:90%;/*vai ocupar 90% da largura*/
+    height:90%;/*vai ocupar 90% da altura*/
+}
+/*cvonfiguração do conteudo secundário*/
+aside{
+    background-color:var(--cor1);
+    padding:10px;
+    border-radius:10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.227);
+}
+aside ul{/*configuração da lista dentro de aside*/
+    list-style-type:'\2714\00A0\00A0';
+    list-style-position:inside;/*faz com que o símbolo da lista fique dentro do bloco*/
+    colunms: 2;/*divide a lista em duas colunas*/
+}
+aside >h3{
+    background-color:var(--cor4);
+    color:white;
+    margin: -10px -10px opx -10px;/*cria uma margem negativa para que o título fique colado na borda*/
+    border-radius:10px 10px 0px 0px;
+}
+footer{
+    color:white;
+    text-align:center;
+    background-color: var(--cor5);
+    font-size:0.8em;
+    padding:5px;
+}
+footer a{
+    color:white;
+    font-weight:bolder;
+    text-decoration:none;
+}
+footer a:hover{
+    text-decoration:underline;
+    color:var(--cor1);
+}
